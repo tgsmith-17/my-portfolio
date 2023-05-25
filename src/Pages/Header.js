@@ -13,6 +13,7 @@ function Header()
       <h1>My Portfolio Site</h1>
       <Link to={'/'} style={linkStyling}>Home</Link>
       <Link to={'/about'} style={linkStyling}>About</Link>
+      <Link to={'/contact'} style={linkStyling}>Contact</Link>
     </nav>
   );
 };
