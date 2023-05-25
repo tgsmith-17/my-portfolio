@@ -1,0 +1,30 @@
+:root {
+  --blue-top: #062F4F;
+  --blue-bottom: #0B548D;
+}
+
+// .home {
+//   padding-bottom: 3vh;
+//   border-radius: 1vh;
+//   padding-left: 5vh;
+//   h1 {
+//     background-color: var(--blue-top);
+//     padding-top: 1vh;
+//     padding-bottom: 1vh;
+//     border-top-left-radius: 1vh;
+//     border-top-right-radius: 1vh;
+//   }
+//   background-color: var(--blue-bottom);
+// }
+
+.home {
+  color: white;
+  padding-left: 1vh;
+  button {
+    color: white;
+    background-color: var(--blue-bottom);
+    border-radius: 1vh;
+    border: none;
+    padding: 1vh 1vh 1vh 1vh;
+  }
+}

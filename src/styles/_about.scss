@@ -1,0 +1,11 @@
+:root {
+  --red: #B82601;
+}
+
+.about {
+  color: white;
+  border-color: 5px var(--red);
+  li {
+    padding-bottom: 2vh;
+  }
+}

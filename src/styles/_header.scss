@@ -1,0 +1,14 @@
+:root {
+  --purp: #813772;
+}
+
+.header {
+  background-color: var(--purp);
+  display: flex;
+  margin: auto;
+  padding: 1rem;
+
+  h1 {
+    padding-right: 5rem;
+  }
+}

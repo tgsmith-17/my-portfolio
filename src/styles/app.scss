@@ -1,0 +1,15 @@
+// color values that are to be used with the site
+:root {
+  --main-background: #000000;
+  --blue: #74B4EE;
+}
+
+body {
+  background-color: var(--main-background);
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 1rem;
+}
+
+@import "./header";
+@import "./home";
+@import "./about";
