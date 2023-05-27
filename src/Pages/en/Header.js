@@ -16,6 +16,9 @@ function Header()
     else if(loc === '/en') {
       setLang('en');
     }
+    else if(loc === '/') {
+      setLang('/');
+    }
   }, [loc]);
 
   const activeLinkStyle = {

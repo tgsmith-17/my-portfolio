@@ -6,6 +6,7 @@ import './styles/app.scss';
 
 // Handles language
 import SetLang from './Pages/SetLang';
+import MouseMover from './Pages/Art_Stuff/MouseMover';
 
 // Pages for English
 import Header from './Pages/en/Header';
@@ -26,6 +27,7 @@ root.render(
         <Route path='/en' element={<Home />} />
         <Route path='/en/about' element={<About />} />
         <Route path='/en/contact' element={<Contact />} />
+        <Route path='/mouseMover' element={<MouseMover />} />
 
         <Route path='/jp' element={<HomeJP />} />
       </Routes>
