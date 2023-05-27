@@ -19,12 +19,25 @@
 
 .home {
   color: white;
-  padding-left: 1vh;
   button {
-    color: white;
-    background-color: var(--blue-bottom);
+    color: inherit;
+    background-color: black;
+    border: 3px solid white;
     border-radius: 1vh;
-    border: none;
     padding: 1vh 1vh 1vh 1vh;
+    font-size: medium;
+    letter-spacing: 0.15vh;
   }
+  button:hover {
+    background-color: rgb(70, 70, 70);
+  }
+  font-weight: 100;
+}
+
+.body {
+  padding-left: 2vh;
+}
+
+.space {
+  padding-bottom: 3vh;
 }

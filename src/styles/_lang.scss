@@ -1,0 +1,19 @@
+.popout {
+  display: flex;
+  justify-content: space-evenly;
+
+  // filter: blur(8px);
+  // -webkit-filter: blur(8px);
+
+  a {
+    color: white;
+    font-size: large;
+    border: 3px solid white;
+    text-decoration: none;
+    padding: 50px 100px;
+  }
+}
+
+.spacer {
+  padding: 10%;
+}

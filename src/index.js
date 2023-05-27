@@ -4,10 +4,17 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import './styles/app.scss';
 
-import Header from './Pages/Header';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
+// Handles language
+import SetLang from './Pages/SetLang';
+
+// Pages for English
+import Header from './Pages/en/Header';
+import Home from './Pages/en/Home';
+import About from './Pages/en/About';
+import Contact from './Pages/en/Contact';
+
+// Pages for Japanese
+import HomeJP from './Pages/jp/Home_JP';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,9 +22,12 @@ root.render(
     <Router>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/' element={<SetLang />}/>
+        <Route path='/en' element={<Home />} />
+        <Route path='/en/about' element={<About />} />
+        <Route path='/en/contact' element={<Contact />} />
+
+        <Route path='/jp' element={<HomeJP />} />
       </Routes>
     </Router>
   </React.StrictMode>

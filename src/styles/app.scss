@@ -6,11 +6,14 @@
 
 body {
   background-color: var(--main-background);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  display: block;
   padding-left: 1rem;
+  font-weight: 300;
 }
 
 @import "./header";
 @import "./home";
 @import "./about";
 @import "./contact";
+@import "./lang";
