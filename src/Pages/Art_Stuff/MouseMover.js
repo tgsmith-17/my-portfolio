@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import ChildCanvas from "./ChildCanvas";
 
 function MouseMover()
 {
-  const [mousePos, setMousePos] = useState({});
+  let [mousePos, setMousePos] = useState({});
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -17,10 +18,11 @@ function MouseMover()
   }, []);
 
   return(
-    <div className="mover">
-      <h3>
-        The mouse is at <b>({mousePos.x}, {mousePos.y})</b>
+    <div>
+      <h3 className="mover">
+        <b>({mousePos.x}, {mousePos.y})</b>
       </h3>
+      <ChildCanvas MouseX={mousePos.x} MouseY={mousePos.y} />
     </div>
   );
 };

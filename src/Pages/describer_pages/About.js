@@ -47,6 +47,7 @@ function About() {
           </Link>
         </li>
       </ul>
+      <h2>Some of My Other Work:</h2>
     </div>
   );
 };
