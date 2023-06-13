@@ -1,44 +1,53 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
-const ChildCanvas = (props, MouseX, MouseY) => {
+function ChildCanvas() {
+  let [mousePos, setMousePos] = useState({});
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePos({x: e.clientX, y: e.clientY});
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      setMousePos({});
+    };
+  }, []);
+
   const canvasRef = useRef(null);
+
+  let x, y;
 
   const width = window.innerWidth;
   const height = window.innerHeight;
 
   // Using this as an example for now
-  const draw = (ctx, frameCount) => {
+  const draw = (ctx) => {
+    x = mousePos.x - (width / 2);
+    y = mousePos.y - (height / 2);
+
+
     ctx.clearRect(0, 0, width, height);
     ctx.fillStyle = '#FFFFFF';
-    ctx.arc(50, 50, 10*Math.sin(frameCount)**2, 0, 2 * Math.PI);
+    ctx.beginPath();
+    ctx.fillRect(0, 0, 50, 50);
     ctx.fill();
-  };
-
-
-  // const draw = (ctx, frameCount) => {
-  //   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-  // };
-
-  const canvasStyle = {
-    // 'backgroundColor': 'gray',
-    'width': `${width}px`,
-    'height': `${height}px`
   };
   
   useEffect(() => {
     const can = canvasRef.current;
     const context = can.getContext('2d');
 
-    let frameCount = 0;
+    context.canvas.width = width;
+    context.canvas.height = height;
+
+    context.translate(width/2, height/2);
+
     let animationFrameID;
 
-    let ratio = Math.min(context.clientWidth / width, context.clientHeight / height);
-
-    context.scale(ratio, ratio);
-
     const render = () => {
-      frameCount++;
-      draw(context, frameCount);
+      draw(context);
       animationFrameID = window.requestAnimationFrame(render);
     };
     render();
@@ -46,12 +55,13 @@ const ChildCanvas = (props, MouseX, MouseY) => {
     return () => {
       window.cancelAnimationFrame(animationFrameID);
     };
-  }, [draw]);
+  }, []);
 
   return (
   <div>
     <h2 style={{'color': 'white'}}>{width}, {height}</h2>
-    <canvas style={canvasStyle} ref={canvasRef} {...props} />
+    <h2 style={{'color': 'white'}}>{x}, {y}</h2>
+    <canvas ref={canvasRef} />
   </div>
   );
 };
