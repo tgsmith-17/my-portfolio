@@ -17,21 +17,21 @@ function ChildCanvas() {
 
   const canvasRef = useRef(null);
 
-  let x, y;
-
   const width = window.innerWidth;
   const height = window.innerHeight;
 
   // Using this as an example for now
   const draw = (ctx) => {
-    x = mousePos.x - (width / 2);
-    y = mousePos.y - (height / 2);
+    let x = mousePos.x - (width / 2);
+    let y = mousePos.y - (height / 2);
 
+    let rectX = Math.floor(-x * 0.05);
+    let rectY = Math.floor(-y * 0.05);
 
     ctx.clearRect(0, 0, width, height);
     ctx.fillStyle = '#FFFFFF';
     ctx.beginPath();
-    ctx.fillRect(0, 0, 50, 50);
+    ctx.fillRect(rectX, rectY, 50, 50);
     ctx.fill();
   };
   
@@ -55,12 +55,10 @@ function ChildCanvas() {
     return () => {
       window.cancelAnimationFrame(animationFrameID);
     };
-  }, []);
+  }, [draw]);
 
   return (
   <div>
-    <h2 style={{'color': 'white'}}>{width}, {height}</h2>
-    <h2 style={{'color': 'white'}}>{x}, {y}</h2>
     <canvas ref={canvasRef} />
   </div>
   );
