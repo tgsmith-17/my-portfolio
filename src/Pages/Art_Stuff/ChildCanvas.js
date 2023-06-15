@@ -1,8 +1,16 @@
 import { useRef, useEffect, useState } from "react";
-import Rectangle from './Rectangle';
+import Rectangle from './Rectangle.js';
+
+const rectangles = [];
+
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+for(let i = 0; i < 45; i++) {
+  rectangles.push(new Rectangle(width, height));
+}
 
 function ChildCanvas() {
-  const rectangles = [];
 
   let [mousePos, setMousePos] = useState({});
 
@@ -20,22 +28,19 @@ function ChildCanvas() {
 
   const canvasRef = useRef(null);
 
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-
-  for(let i = 0; i < 45; i++) {
-    rectangles.push(new Rectangle(width, height));
-  }
+  console.log(rectangles[0].width);
 
   // Using this as an example for now
   const draw = (ctx) => {
-    let x = mousePos.x - (width / 2);
-    let y = mousePos.y - (height / 2);
+    let x = (-mousePos.x - (width / 2)) * 0.05;
+    let y = (-mousePos.y - (height / 2)) * 0.05;
 
     ctx.clearRect(0, 0, width, height);
     ctx.fillStyle = '#FFFFFF';
     ctx.beginPath();
     for(let i = 0; i < rectangles.length; i++) {
+      rectangles[i].calcMoveX(x);
+      rectangles[i].calcMoveY(y);
       ctx.fillRect(rectangles[i].x, rectangles[i].y, rectangles[i].width, rectangles[i].height);
     }
     ctx.fill();
