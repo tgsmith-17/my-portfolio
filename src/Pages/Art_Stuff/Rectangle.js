@@ -1,23 +1,21 @@
 class Rectangle
 {
+  // Keep trying to move rectangle movement function here
+
   constructor(width, height)
   {
-    this.x = Math.floor(Math.random()*width) - (width / 2);
-    this.y = Math.floor(Math.random()*height) - (height / 2);
+    this.x = Math.floor(Math.random()*width);
+    this.y = Math.floor(Math.random()*height);
     this.width = Math.floor(Math.random()*150);
     this.height = Math.floor(Math.random()*150);
     this.depth = Math.random();
   };
 
-  calcMoveX(x)
-  {
-    this.x += x * this.depth;
-  };
-  
-  calcMoveY(y)
-  {
-    this.y += y * this.depth;
-  };
+  // calcMove(x_in, y_in)
+  // {
+  //   this.x += x_in * this.depth;
+  //   this.y += y_in * this.depth;
+  // };
 };
 
 export default Rectangle;

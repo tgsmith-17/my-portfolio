@@ -39,11 +39,15 @@ function ChildCanvas() {
     ctx.fillStyle = '#FFFFFF';
     ctx.beginPath();
     for(let i = 0; i < rectangles.length; i++) {
-      rectangles[i].calcMoveX(x);
-      rectangles[i].calcMoveY(y);
+      //rectangles[i].calcMove(x, y);
+
+      rectangles[i].x += (x * rectangles[i].depth);
+      rectangles[i].y += (y * rectangles[i].depth);
+
       ctx.fillRect(rectangles[i].x, rectangles[i].y, rectangles[i].width, rectangles[i].height);
     }
     ctx.fill();
+    console.log(rectangles[0].x + ', ' + rectangles[0].y);
   };
   
   useEffect(() => {
