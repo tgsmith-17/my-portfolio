@@ -11,11 +11,11 @@ class Rectangle
     this.depth = Math.random();
   };
 
-  // calcMove(x_in, y_in)
-  // {
-  //   this.x += x_in * this.depth;
-  //   this.y += y_in * this.depth;
-  // };
+  moveToMouse(x, y)
+  {
+    this.x += (x * this.depth);
+    this.y += (y * this.depth);
+  };
 };
 
 export default Rectangle;

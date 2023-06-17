@@ -1,10 +1,13 @@
 import { useRef, useEffect, useState } from "react";
 import Rectangle from './Rectangle.js';
 
-const rectangles = [];
+let rectangles = [];
 
 const width = window.innerWidth;
 const height = window.innerHeight;
+
+// tmp var for debugging
+let rect = new Rectangle(width, height);
 
 for(let i = 0; i < 45; i++) {
   rectangles.push(new Rectangle(width, height));
@@ -38,16 +41,28 @@ function ChildCanvas() {
     ctx.clearRect(0, 0, width, height);
     ctx.fillStyle = '#FFFFFF';
     ctx.beginPath();
-    for(let i = 0; i < rectangles.length; i++) {
-      //rectangles[i].calcMove(x, y);
 
-      rectangles[i].x += (x * rectangles[i].depth);
-      rectangles[i].y += (y * rectangles[i].depth);
+    //rect.moveToMouse(x, y);
 
-      ctx.fillRect(rectangles[i].x, rectangles[i].y, rectangles[i].width, rectangles[i].height);
-    }
+    // if(rect) {
+    //   console.log("It does indeed exist");
+    // }
+
+    // ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+
+    rectangles.forEach(r => {
+      r.moveToMouse(x, y);
+      ctx.fillRect(r.x,  r.y, r.width, r.height);
+    });
+
+    // for(let i = 0; i < rectangles.length; i++) {
+
+    //   rectangles[i].moveToMouse(x, y);
+
+    //   ctx.fillRect(rectangles[i].x, rectangles[i].y, rectangles[i].width, rectangles[i].height);
+    // }
     ctx.fill();
-    console.log(rectangles[0].x + ', ' + rectangles[0].y);
+    //console.log(rectangles[0].x + ', ' + rectangles[0].y);
   };
   
   useEffect(() => {
