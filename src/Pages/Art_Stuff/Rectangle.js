@@ -4,17 +4,22 @@ class Rectangle
 
   constructor(width, height)
   {
-    this.x = Math.floor(Math.random()*width);
-    this.y = Math.floor(Math.random()*height);
-    this.width = Math.floor(Math.random()*150);
-    this.height = Math.floor(Math.random()*150);
-    this.depth = Math.random();
+    this.x = Math.random() * width;
+    this.y = Math.random() * height;
+    this.width = Math.floor(Math.random()*150) + 50;
+    this.height = Math.floor(Math.random()*150) + 75;
+    this.depth = Math.random()*4 + 0.5;
+    this.color = '#' + Math.floor(Math.random()*16777215).toString(16);
   };
 
-  moveToMouse(x, y)
+  moveXToMouse(x)
   {
-    this.x += (x * this.depth);
-    this.y += (y * this.depth);
+    return this.x + -(x * this.depth);
+  };
+
+  moveYToMouse(y)
+  {
+    return this.y + -(y * this.depth);
   };
 };
 
