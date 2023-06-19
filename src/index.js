@@ -15,9 +15,10 @@ import Contact from './Pages/describer_pages/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <>
   <React.StrictMode>
     <Router>
-      <Header />
+      {<Header /> && window.location.pathname !== '/mouseMover'}
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />} />
@@ -26,4 +27,5 @@ root.render(
       </Routes>
     </Router>
   </React.StrictMode>
+  </>
 );

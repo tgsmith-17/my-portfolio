@@ -1,6 +1,6 @@
 /*
   TODO:
-  Fix rectangle position update
+  Sort rects from least to greatest by depth
 */
 
 import { useRef, useEffect, useState } from "react";
@@ -46,7 +46,7 @@ function ChildCanvas() {
     for(let i = 0; i < rectangles.length; i++) {
       ctx.fillStyle = rectangles[i].color;
       let tmpX = rectangles[i].moveXToMouse(x);
-      let tmpY = rectangles[i].moveXToMouse(y);
+      let tmpY = rectangles[i].moveYToMouse(y);
       ctx.fillRect(tmpX, tmpY, rectangles[i].width, rectangles[i].height);
     }
     ctx.fill();
