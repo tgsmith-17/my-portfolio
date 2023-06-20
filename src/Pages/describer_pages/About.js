@@ -44,7 +44,7 @@ function About() {
           </ul>
         </li>
         <li>
-          <Link style={linkStyle} to='https://github.com/tgsmith-17/my-portfolio'>
+          <Link style={linkStyle} target="_blank" to='https://github.com/tgsmith-17/my-portfolio'>
             Link to the repo for this site
           </Link>
         </li>
