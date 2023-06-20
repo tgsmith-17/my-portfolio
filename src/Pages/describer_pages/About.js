@@ -43,6 +43,11 @@ function About() {
             </li>
           </ul>
         </li>
+        <li>
+          <Link style={linkStyle} to='https://github.com/tgsmith-17/my-portfolio'>
+            Link to the repo for this site
+          </Link>
+        </li>
       </ul>
       </div>
     </div>
