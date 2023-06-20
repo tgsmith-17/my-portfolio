@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 import data from "../../data/aboutPage.json";
 
@@ -8,13 +9,26 @@ function About() {
   };
 
   return (
-    <div className="about">
+    <div>
+      <Header activeLink={[false, true, false]} />
+      <div className="about">
       <h2>About Me</h2>
       <p>{data.paragraph}</p>
       <ul>{data.fluent_languages.map(lang => (
         <li key={lang}><p>{lang}</p></li>
       ))}</ul>
-      <h2>My Work:</h2>
+      <h2>My Work That's on this Site:</h2>
+      <ul>
+        <li>
+          <Link
+           style={linkStyle}
+           to={'/mouseMover'}
+           target="_blank">
+            Mouse movement detector uh, thingy
+          </Link>
+        </li>
+      </ul>
+      <h2>Some of My Other Work:</h2>
       <ul>
         <li>
           <Link
@@ -29,25 +43,8 @@ function About() {
             </li>
           </ul>
         </li>
-        <li>
-          <p>My GitHub -- <Link
-            style={linkStyle}
-            to='https://github.com/tgsmith-17'
-            target="_blank">
-            tgsmith-17
-          </Link>
-          </p>
-        </li>
-        <li>
-          <Link
-           style={linkStyle}
-           to={'/mouseMover'}
-           target="_blank">
-            Mouse movement detector uh, thingy
-          </Link>
-        </li>
       </ul>
-      <h2>Some of My Other Work:</h2>
+      </div>
     </div>
   );
 };

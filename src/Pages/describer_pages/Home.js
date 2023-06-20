@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "./Header";
 
 function Home()
 {
@@ -17,14 +18,17 @@ function Home()
   };
 
   return(
-    <div className="home">
-      <h1>Home Page</h1>
-      <div className="body">
-        <div className="space"></div>
-        <h3>Here's a random Kanye West quote</h3>
-        <h2>"{quote}"</h2>
-        <h3>-- Kanye West</h3>
-        <button onClick={getQuote}>Get a Quote</button>
+    <div>
+      <Header activeLink={[true, false, false]} />
+      <div className="home">
+        <h1>Home Page</h1>
+        <div className="body">
+          <div className="space"></div>
+          <h3>Here's a random Kanye West quote</h3>
+          <h2>"{quote}"</h2>
+          <h3>-- Kanye West</h3>
+          <button onClick={getQuote}>Get a Quote</button>
+        </div>
       </div>
     </div>
   );

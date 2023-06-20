@@ -15,6 +15,14 @@ for(let i = 0; i < 45; i++) {
   rectangles.push(new Rectangle(width, height));
 }
 
+const textStyle = {
+  'backgroundColor': 'red',
+  'color': 'white',
+  'padding': '15px',
+  'borderRadius': '15px',
+  'border': 'none'
+};
+
 function ChildCanvas() {
 
   let [mousePos, setMousePos] = useState({});
@@ -31,17 +39,21 @@ function ChildCanvas() {
     };
   }, []);
 
+
   const canvasRef = useRef(null);
 
   console.log(rectangles[0].width);
 
-  // Using this as an example for now
+  // contains everything that needs to be rendered on screen
   const draw = (ctx) => {
     let x = mousePos.x * 0.1;
     let y = mousePos.y * 0.1;
 
     ctx.clearRect(0, 0, width, height);
     ctx.beginPath();
+
+    ctx.font = '48px Poppins';
+    ctx.fillText("Where's the Button?", 50, height/2);
 
     for(let i = 0; i < rectangles.length; i++) {
       ctx.fillStyle = rectangles[i].color;
@@ -75,7 +87,9 @@ function ChildCanvas() {
 
   return (
   <div>
-    <canvas ref={canvasRef} />
+    {/* <h1 style={textStyle}>Close Tab</h1> */}
+    <canvas className="mover" ref={canvasRef} />
+    <button onClick={window.close} style={textStyle}>It's'a Me</button>
   </div>
   );
 };

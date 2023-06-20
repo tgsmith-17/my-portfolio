@@ -8,7 +8,6 @@ import './styles/app.scss';
 import MouseMover from './Pages/Art_Stuff/MouseMover';
 
 // Pages for English
-import Header from './Pages/describer_pages/Header';
 import Home from './Pages/describer_pages/Home';
 import About from './Pages/describer_pages/About';
 import Contact from './Pages/describer_pages/Contact';
@@ -18,7 +17,6 @@ root.render(
   <>
   <React.StrictMode>
     <Router>
-      {<Header /> && window.location.pathname !== '/mouseMover'}
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />} />

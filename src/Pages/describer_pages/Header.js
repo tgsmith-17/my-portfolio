@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-function Header()
+function Header({activeLink})
 {
-  const [selected, setSelected] = useState([true, false, false]);
+  const [selected, setSelected] = useState([]);
 
   const activeLinkStyle = {
     'borderBottom': "3px solid white"
@@ -13,6 +13,11 @@ function Header()
     'borderBottom': 'none'
   };
 
+  useEffect(() => {
+    setSelected(activeLink);
+  },
+  [activeLink]);
+
   return(
     <>
     <header className="header">
@@ -20,13 +25,13 @@ function Header()
       <nav>
         <ul>
           <li style={selected[0] ? activeLinkStyle : regLinkStyle}>
-            <Link to={'/'} onClick={() => setSelected([true, false, false])}>Home</Link>
+            <Link to={'/'}>Home</Link>
           </li>
           <li style={selected[1] ? activeLinkStyle : regLinkStyle}>
-            <Link to={'/about'} onClick={() => setSelected([false, true, false])}>About</Link>
+            <Link to={'/about'}>About</Link>
           </li>
           <li style={selected[2] ? activeLinkStyle : regLinkStyle}>
-            <Link to={'/contact'} onClick={() => setSelected([false, false, true])}>Contact</Link>
+            <Link to={'/contact'}>Contact</Link>
           </li>
         </ul>
       </nav>
