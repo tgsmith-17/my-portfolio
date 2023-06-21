@@ -16,13 +16,7 @@ function Home() {
       let selected = data[Math.floor(Math.random() * tmp)];
 
       setQuote(selected.text);
-
-      let tmpAuth = author;
       setAuthor(selected.author);
-
-      if (author === tmpAuth) {
-        setAuthor("Unknown");
-      }
     } catch (e) {
       setQuote("Unable to fetch quote. Please try again later");
       console.log(e);
