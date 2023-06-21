@@ -16,12 +16,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   <React.StrictMode>
-    <Router>
+    <Router basename='my-portfolio/'>
       <Routes>
-        <Route path='my-portfolio/' element={<Home />}/>
-        <Route path='my-portfolio/about' element={<About />} />
-        <Route path='my-portfolio/contact' element={<Contact />} />
-        <Route path='my-portfolio/mouseMover' element={<MouseMover />} />
+        <Route path='/' element={<Home />}/>
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/mouseMover' element={<MouseMover />} />
       </Routes>
     </Router>
   </React.StrictMode>

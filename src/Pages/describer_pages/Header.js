@@ -25,13 +25,13 @@ function Header({activeLink})
       <nav>
         <ul>
           <li style={selected[0] ? activeLinkStyle : regLinkStyle}>
-            <Link to={'my-portfolio/'}>Home</Link>
+            <Link to={'/'}>Home</Link>
           </li>
           <li style={selected[1] ? activeLinkStyle : regLinkStyle}>
-            <Link to={'my-portfolio/about'}>About</Link>
+            <Link to={'/about'}>About</Link>
           </li>
           <li style={selected[2] ? activeLinkStyle : regLinkStyle}>
-            <Link to={'my-portfolio/contact'}>Contact</Link>
+            <Link to={'/contact'}>Contact</Link>
           </li>
         </ul>
       </nav>
