@@ -2,6 +2,8 @@ import { useState } from "react";
 import Header from "./Header";
 
 function Home() {
+  alert("There is currently an issue that causes 404 on page refresh (except for this page, the home)\nPlease keep that on mind when using this site\nThank you for visiting :)");
+
   const [quote, setQuote] = useState("It will display here");
   const [author, setAuthor] = useState("Author");
 

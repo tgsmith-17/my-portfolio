@@ -11,6 +11,10 @@ let rectangles = [];
 const width = window.innerWidth;
 const height = window.innerHeight;
 
+const backHome = () => {
+  window.location.href = '/my-portfolio/';
+};
+
 for(let i = 0; i < 45; i++) {
   rectangles.push(new Rectangle(width, height));
 }
@@ -89,7 +93,7 @@ function ChildCanvas() {
   <div>
     {/* <h1 style={textStyle}>Close Tab</h1> */}
     <canvas className="mover" ref={canvasRef} />
-    <button onClick={window.location.href = '/'} style={textStyle}>It's'a Me</button>
+    <button onClick={backHome} style={textStyle}>It's'a Me</button>
   </div>
   );
 };
