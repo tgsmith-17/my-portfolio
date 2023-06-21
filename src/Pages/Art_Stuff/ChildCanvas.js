@@ -89,7 +89,7 @@ function ChildCanvas() {
   <div>
     {/* <h1 style={textStyle}>Close Tab</h1> */}
     <canvas className="mover" ref={canvasRef} />
-    <button onClick={window.close} style={textStyle}>It's'a Me</button>
+    <button onClick={window.location.href = '/'} style={textStyle}>It's'a Me</button>
   </div>
   );
 };

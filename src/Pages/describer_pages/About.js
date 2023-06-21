@@ -22,8 +22,7 @@ function About() {
         <li>
           <Link
            style={linkStyle}
-           to={'/mouseMover'}
-           target="_blank">
+           to={'/mouseMover'}>
             Mouse movement detector uh, thingy
           </Link>
         </li>
