@@ -18,10 +18,10 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/mouseMover' element={<MouseMover />} />
+        <Route path='my-portfolio/' element={<Home />}/>
+        <Route path='my-portfolio/about' element={<About />} />
+        <Route path='my-portfolio/contact' element={<Contact />} />
+        <Route path='my-portfolio/mouseMover' element={<MouseMover />} />
       </Routes>
     </Router>
   </React.StrictMode>
