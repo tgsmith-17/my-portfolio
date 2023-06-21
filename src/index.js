@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   <React.StrictMode>
-    <Router basename='my-portfolio/'>
+    <Router basename='/my-portfolio'>
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/about' element={<About />} />
