@@ -1,11 +1,10 @@
 import { useState } from "react";
 import Header from "./Header";
 
-function Home()
-{
+function Home() {
   const [quote, setQuote] = useState("It will display here");
   const [author, setAuthor] = useState("Author");
-  
+
   const getQuote = async () => {
     try {
       var data = await (
@@ -14,23 +13,23 @@ function Home()
 
       let tmp = Object.keys(data).length;
 
-      let selected = data[Math.floor(Math.random()*tmp)];
+      let selected = data[Math.floor(Math.random() * tmp)];
 
       setQuote(selected.text);
 
       let tmpAuth = author;
       setAuthor(selected.author);
 
-      if(author === tmpAuth) {
+      if (author === tmpAuth) {
         setAuthor("Unknown");
       }
-    } catch(e) {
+    } catch (e) {
       setQuote("Unable to fetch quote. Please try again later");
       console.log(e);
     }
   };
 
-  return(
+  return (
     <div>
       <Header activeLink={[true, false, false]} />
       <div className="home">
