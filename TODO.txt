@@ -1,0 +1,3 @@
+Make a page to handle 404 errors
+
+Fix issue with routes becoming unavailable after refresh
