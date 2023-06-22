@@ -1,9 +1,26 @@
-.error-page {
-  display: block;
-  color: white;
+.padding {
+  padding: 30%;
+}
+
+.redirect-button {
+  padding: 15px;
+  border: none;
+  background-color: white;
   a {
-    text-align: justify;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.error-page {
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-around;
+  h1 {
+    align-self: center;
   }
 
-  border: 5px solid white;
+  border: 3px solid white;
 }
