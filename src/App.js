@@ -10,6 +10,7 @@ import MouseMover from './Pages/Art_Stuff/MouseMover';
 import Home from './Pages/describer_pages/Home';
 import About from './Pages/describer_pages/About';
 import Contact from './Pages/describer_pages/Contact';
+import Redirect from './Pages/describer_pages/Redirect';
 
 function App()
 {
@@ -29,6 +30,7 @@ function App()
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/mouseMover' element={<MouseMover />} />
+          <Route path='/*' element={<Redirect />} />
         </Routes>
       </Router>
     </React.StrictMode>

@@ -1,5 +1,3 @@
-Make a page to handle 404 errors
+Finish page to handle 404 errors
 
-Fix issue with routes becoming unavailable after refresh
-
-Style the Header links in a better way, 'using align-items: center;'
+Do more stuff with the Header

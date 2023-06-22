@@ -12,7 +12,7 @@ const width = window.innerWidth;
 const height = window.innerHeight;
 
 const backHome = () => {
-  window.location.href = '/my-portfolio/about';
+  window.location.href = '/my-portfolio/';
 };
 
 for(let i = 0; i < 45; i++) {
