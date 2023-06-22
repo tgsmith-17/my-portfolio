@@ -13,6 +13,13 @@ import Contact from './Pages/describer_pages/Contact';
 
 function App()
 {
+  let alertShown = false;
+
+  if(!alertShown) {
+    alert("There is currently an issue that causes 404 on page refresh (except for this page, the home)\nPlease keep that on mind when using this site\nThank you for visiting :)");
+    alertShown = true;
+  }
+
   return(
     <>
     <React.StrictMode>
