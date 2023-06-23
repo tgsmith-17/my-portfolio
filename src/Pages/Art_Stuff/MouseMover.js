@@ -2,15 +2,6 @@ import ChildCanvas from "./ChildCanvas";
 
 function MouseMover()
 {
-  const buttonStyle = {
-    'padding': '10px',
-    'backgroundColor': 'red',
-    'color': 'white',
-    'border': 'none',
-    'borderRadius': '15px',
-    'outline': 'none'
-  };
-
   return(
     <>
     <div>
