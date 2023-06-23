@@ -6,7 +6,7 @@ import './styles/app.scss';
 // Fun, Creative Stuff
 import MouseMover from './Pages/Art_Stuff/MouseMover';
 
-// Pages for English
+// Pages
 import Home from './Pages/describer_pages/Home';
 import About from './Pages/describer_pages/About';
 import Contact from './Pages/describer_pages/Contact';
@@ -14,12 +14,12 @@ import Redirect from './Pages/describer_pages/Redirect';
 
 function App()
 {
-  let alertShown = false;
+  // let alertShown = false;
 
-  if(!alertShown) {
-    alert("There is currently an issue that causes 404 on page refresh (except for this page, the home)\nPlease keep that on mind when using this site\nThank you for visiting :)");
-    alertShown = true;
-  }
+  // if(!alertShown) {
+  //   alert("There is currently an issue that causes 404 on page refresh (except for this page, the home)\nPlease keep that on mind when using this site\nThank you for visiting :)");
+  //   alertShown = true;
+  // }
 
   return(
     <>

@@ -23,7 +23,7 @@ function About() {
           <Link
            style={linkStyle}
            to={'/mouseMover'}>
-            Mouse movement detector uh, thingy
+            Rectangle Mover
           </Link>
         </li>
       </ul>
