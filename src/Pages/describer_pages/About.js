@@ -22,6 +22,13 @@ function About() {
         <li>
           <Link
            style={linkStyle}
+           to={'/cardSearcher'}>
+            Magic Card Searcher
+          </Link>
+        </li>
+        <li>
+          <Link
+           style={linkStyle}
            to={'/mouseMover'}>
             Rectangle Mover
           </Link>

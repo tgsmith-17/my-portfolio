@@ -1,3 +1,2 @@
-Finish page to handle 404 errors
-
-Do more stuff with the Header
+Fix styling for Magic Cards, as well as
+  replacing image if card.imageUrl doesn't exist

@@ -8,8 +8,8 @@ function Home() {
 
   const getQuote = async () => {
     try {
-      var data = await (
-        await fetch(`https://type.fit/api/quotes`)
+      let data = await (
+        fetch(`https://type.fit/api/quotes`)
       ).json();
 
       let tmp = Object.keys(data).length;

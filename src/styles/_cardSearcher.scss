@@ -1,0 +1,51 @@
+.card-page {
+  display: flex;
+  border: 3px solid white;
+  color: white;
+  padding-top: 5vh;
+  padding-left: 2vh;
+}
+
+.card-search {
+  display: flex;
+  label {
+    font-size: larger;
+    font-weight: bold;
+    padding-right: 2vh;
+  }
+  input {
+    font-size: large;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+  }
+  button {
+    color: white;
+    border: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: black;
+    padding: 0.5vh;
+  }
+  button:hover {
+    background-color: rgb(70, 70, 70);
+  }
+  padding-bottom: 5vh;
+}
+
+.cards {
+  display: flexbox;
+  align-items: center;
+  padding: 2vh;
+  gap: 2vh;
+  height: auto;
+  border: solid 3px white;
+  // height: 10vh;
+}
+
+.card {
+  img {
+    height: 35vh;
+    border: 5px solid white;
+  }
+}
