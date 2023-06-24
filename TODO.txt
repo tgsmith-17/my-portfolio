@@ -1,2 +1,5 @@
 Fix styling for Magic Cards, as well as
   replacing image if card.imageUrl doesn't exist
+
+Use 'display: grid' with 'grid-template-colums: 30%'
+	for the card displays
