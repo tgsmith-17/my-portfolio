@@ -21,7 +21,7 @@
 // }
 
 .header {
-  color: white;
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,8 +30,12 @@
   height: 100%;
   gap: 2rem;
   padding: 0 1rem;
-  border: solid 3px white;
+  border: solid 5px black;
+  border-radius: 5px;
 
+  h1 {
+    color: black;
+  }
   ul {
     padding: 0;
     margin: 0;
@@ -41,10 +45,14 @@
   li {
     padding: 15% 1vh;
     overflow: hidden;
+    a {
+      font-weight: bolder;
+      color: black;
+    }
   }
   li:hover {
     //animation: lightUp 0.3s ease-out 0s 1 normal forwards;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(168, 168, 168);
     a {
       color: white;
     }
@@ -53,7 +61,6 @@
     }
   }
   a {
-    color: inherit;
     text-decoration: none;
     display: flex;
     align-items: center;

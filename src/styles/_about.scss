@@ -1,11 +1,13 @@
-:root {
-  --red: #B82601;
-}
-
 .about {
-  padding-left: 1vh;
-  color: white;
+  // text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  border: solid 5px black;
+  border-radius: 10px;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  color: black;
   li {
-    padding-bottom: 0.5vh;
+    padding-bottom: 0.3vh;
   }
 }

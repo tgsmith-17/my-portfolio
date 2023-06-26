@@ -5,12 +5,13 @@ import data from "../../data/aboutPage.json";
 
 function About() {
   const linkStyle = {
-    'color': 'white'
+    'color': 'black'
   };
 
   return (
     <div>
       <Header activeLink={[false, true, false]} />
+      <div className="space"></div>
       <div className="about">
       <h2>About Me</h2>
       <p>{data.paragraph}</p>

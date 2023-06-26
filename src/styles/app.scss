@@ -1,6 +1,6 @@
 // color values that are to be used with the site
 :root {
-  --main-background: #000000;
+  --main-background: white;
   --blue: #74B4EE;
 }
 
@@ -8,10 +8,9 @@ body {
   background-color: var(--main-background);
   font-family: 'Poppins', sans-serif;
   display: block;
-  padding-left: 1rem;
   font-weight: 300;
   margin: 0px;
-  padding: 0px;
+  // padding: 0px;
 }
 
 @import "./header";

@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 function Contact()
 {
   const linkStyle = {
-    'color': 'white'
+    'color': 'black'
   };
 
   return(
     <div>
       <Header activeLink={[false, false, true]}/>
+      <div className="space"></div>
       <div className="contact">
         <h2>Ways you can contact me:</h2>
         <ul>

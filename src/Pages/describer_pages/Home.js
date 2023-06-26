@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./Header";
+import SumOfMe from "./SumOfMe";
 
 function Home() {
 
@@ -8,9 +9,8 @@ function Home() {
 
   const getQuote = async () => {
     try {
-      let data = await (
-        fetch(`https://type.fit/api/quotes`)
-      ).json();
+      let data = await fetch('https://type.fit/api/quotes')
+        .then(res => res.json());
 
       let tmp = Object.keys(data).length;
 
@@ -27,16 +27,18 @@ function Home() {
   return (
     <div>
       <Header activeLink={[true, false, false]} />
+      <div className="space"></div>
       <div className="home">
         <h1>Home Page</h1>
         <div className="body">
-          <div className="space"></div>
           <h3>Fetch an Inspirational Quote</h3>
           <h2>"{quote}"</h2>
           <h3 className="author">-- {author}</h3>
           <button onClick={getQuote}>Get a Quote</button>
         </div>
       </div>
+      <div className="space"></div>
+      <SumOfMe />
     </div>
   );
 };
