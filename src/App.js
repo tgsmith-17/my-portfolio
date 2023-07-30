@@ -15,7 +15,6 @@ import MagicCardSearcher from './Pages/Art_Stuff/CardFinder/MagicCardSearcher';
 
 function App()
 {
-
   return(
     <>
     <React.StrictMode>

@@ -1,17 +1,19 @@
 :root {
-  --blue-top: #062F4F;
+  --outer-div: #035096;
   --blue-bottom: #0B548D;
+  --text-color: #FCAF69;
 }
 
 .home {
   width: 85%;
   margin: 0 auto;
-  border: 3px solid black;
+  // border: 3px solid black;
   border-radius: 5pt;
   padding-left: 3vh;
   padding-top: 1vh;
   padding-bottom: 2vh;
-  color: black;
+  background-color: var(--outer-div);
+  color: var(--text-color);
   button {
     color: white;
     background-color: black;
@@ -25,6 +27,9 @@
     background-color: rgb(70, 70, 70);
   }
   font-weight: 100;
+  a {
+    color: var(--text-color);
+  }
 }
 
 .author {

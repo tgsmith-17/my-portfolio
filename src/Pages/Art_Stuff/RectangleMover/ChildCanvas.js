@@ -76,6 +76,10 @@ function ChildCanvas() {
     context.canvas.width = width;
     context.canvas.height = height;
 
+    if(mousePos.x == undefined || mousePos.y == undefined) {
+      draw(context);
+    }
+
     let animationFrameID;
 
     const render = () => {

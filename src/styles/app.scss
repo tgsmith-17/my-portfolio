@@ -1,13 +1,14 @@
 // color values that are to be used with the site
 :root {
-  --main-background: white;
-  --blue: #74B4EE;
+  --main-background: #E4ECFF;
+  --main-text-color: #27007F;
 }
 
 body {
   background-color: var(--main-background);
   font-family: 'Poppins', sans-serif;
   display: block;
+  color: var(--main-text-color);
   font-weight: 300;
   margin: 0px;
   // padding: 0px;

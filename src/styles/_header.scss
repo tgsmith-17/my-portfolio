@@ -1,5 +1,6 @@
 :root {
-  --purp: #813772;
+  --div-background: #035096;
+  --text-color: #FCAF69;
 }
 
 * {
@@ -21,7 +22,7 @@
 // }
 
 .header {
-  color: black;
+  background-color: var(--div-background);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,11 +31,11 @@
   height: 100%;
   gap: 2rem;
   padding: 0 1rem;
-  border: solid 5px black;
+  // border: solid 3px black;
   border-radius: 5px;
 
   h1 {
-    color: black;
+    color: var(--text-color);
   }
   ul {
     padding: 0;
@@ -46,8 +47,8 @@
     padding: 15% 1vh;
     overflow: hidden;
     a {
+      color: var(--text-color);
       font-weight: bolder;
-      color: black;
     }
   }
   li:hover {

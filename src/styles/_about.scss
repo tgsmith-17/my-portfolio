@@ -1,13 +1,23 @@
+:root {
+  --div-background: #035096;
+  --text-color: #FCAF69;
+}
+
 .about {
   // text-align: center;
   margin: 0 auto;
   width: 80%;
-  border: solid 5px black;
+  // border: solid 5px black;
   border-radius: 10px;
-  padding-left: 5vh;
-  padding-right: 5vh;
-  color: black;
+  padding: 2vh 5vh;
+  // padding-left: 5vh;
+  // padding-right: 5vh;
+  background-color: var(--div-background);
+  color: var(--text-color);
   li {
     padding-bottom: 0.3vh;
+    a {
+      color: var(--text-color);
+    }
   }
 }

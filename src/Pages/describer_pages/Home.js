@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import Header from "./Header";
 import SumOfMe from "./SumOfMe";
 
@@ -18,6 +20,7 @@ function Home() {
 
       setQuote(selected.text);
       setAuthor(selected.author);
+      console.log(selected.author);
     } catch (e) {
       setQuote("Unable to fetch quote. Please try again later");
       console.log(e);
@@ -36,6 +39,7 @@ function Home() {
           <h3 className="author">-- {author}</h3>
           <button onClick={getQuote}>Get a Quote</button>
         </div>
+      <h4>Brought to you by <Link to="type.fit">type.fit</Link></h4>
       </div>
       <div className="space"></div>
       <SumOfMe />
