@@ -1,6 +1,5 @@
-:root {
-  --outer-div: #035096;
-  --blue-bottom: #0B548D;
+::root {
+  --div-background: #035096;
   --text-color: #FCAF69;
 }
 
@@ -12,7 +11,7 @@
   padding-left: 3vh;
   padding-top: 1vh;
   padding-bottom: 2vh;
-  background-color: var(--outer-div);
+  background-color: var(--div-background);
   color: var(--text-color);
   button {
     color: white;

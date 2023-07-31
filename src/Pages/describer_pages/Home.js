@@ -39,7 +39,7 @@ function Home() {
           <h3 className="author">-- {author}</h3>
           <button onClick={getQuote}>Get a Quote</button>
         </div>
-      <h4>Brought to you by <Link to="type.fit">type.fit</Link></h4>
+      <h4>API made available by <Link to="type.fit">type.fit</Link></h4>
       </div>
       <div className="space"></div>
       <SumOfMe />

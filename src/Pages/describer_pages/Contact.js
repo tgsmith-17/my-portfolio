@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Contact()
 {
   const linkStyle = {
-    'color': 'black'
+    'color': '#FCAF69'
   };
 
   return(

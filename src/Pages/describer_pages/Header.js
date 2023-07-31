@@ -11,7 +11,7 @@ function Header({activeLink})
   }, [activeLink]);
 
   const activeLinkStyle = {
-    'borderBottom': "3px solid black"
+    'borderBottom': "3px solid #FCAF69"
   };
 
   const regLinkStyle = {

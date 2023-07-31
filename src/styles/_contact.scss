@@ -1,14 +1,22 @@
+:root {
+  --div-background: #035096;
+  --text-color: #FCAF69;
+}
+
 .contact {
-  padding: 0 3vh;
+  padding: 1vh 3vh;
   width: 85%;
   margin: 0 auto;
-  color: black;
-  border: solid 3px black;
+  color: var(--text-color);
+  background-color: var(--div-background);
   border-radius: 5px;
   ul {
     padding-top: 20px;
   }
   li {
     padding-bottom: 20px;
+  }
+  a {
+    color: var(--text-color);
   }
 }

@@ -5,7 +5,7 @@ import data from "../../data/aboutPage.json";
 
 function About() {
   const linkStyle = {
-    'color': 'black'
+    'color': '#FCAF69'
   };
 
   return (
