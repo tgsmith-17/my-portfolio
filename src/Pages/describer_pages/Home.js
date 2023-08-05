@@ -33,7 +33,7 @@ function Home() {
     <div>
       <Header activeLink={[true, false, false]} />
       <div className="vid-container">
-        <video width="100%" height="100%" autoPlay loop muted>
+        <video width="100%" height="10%" autoPlay loop muted>
           <source src={video} type="video/mp4" />
         </video>
         <h2>Gage Smith</h2>
