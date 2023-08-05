@@ -11,6 +11,7 @@
   padding-left: 3vh;
   padding-top: 1vh;
   padding-bottom: 2vh;
+  padding-right: 3vh;
   background-color: var(--div-background);
   color: var(--text-color);
   button {
@@ -28,6 +29,33 @@
   font-weight: 100;
   a {
     color: var(--text-color);
+  }
+}
+
+.vid-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  video {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  h2 {
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    object-fit: cover;
+    position: absolute;
+    color: black;
+    font-weight: bolder;
+    align-self: center;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 45);
   }
 }
 

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import SumOfMe from "./SumOfMe";
 
+import video from "../../data/out.mp4";
+
 function Home() {
 
   const [quote, setQuote] = useState("It will display here");
@@ -30,6 +32,12 @@ function Home() {
   return (
     <div>
       <Header activeLink={[true, false, false]} />
+      <div className="vid-container">
+        <video width="100%" height="100%" autoPlay loop muted>
+          <source src={video} type="video/mp4" />
+        </video>
+        <h2>Gage Smith</h2>
+      </div>
       <div className="space"></div>
       <div className="home">
         <h1>Home Page</h1>
@@ -39,7 +47,7 @@ function Home() {
           <h3 className="author">-- {author}</h3>
           <button onClick={getQuote}>Get a Quote</button>
         </div>
-      <h4>API made available by <Link to="type.fit">type.fit</Link></h4>
+      <h4>API made available by <Link target="_blank" to="https://type.fit">type.fit</Link></h4>
       </div>
       <div className="space"></div>
       <SumOfMe />
